@@ -17,3 +17,4 @@ c:\users\adams\documents\visual studio 2012\Projects\GuiaCopa\GuiaCopa\obj\Debug
 c:\users\adams\documents\visual studio 2012\Projects\GuiaCopa\GuiaCopa\obj\Debug\GuiaCopa.dll
 c:\users\adams\documents\visual studio 2012\Projects\GuiaCopa\GuiaCopa\obj\Debug\GuiaCopa.pdb
 c:\users\adams\documents\visual studio 2012\Projects\GuiaCopa\GuiaCopa\obj\Debug\XapCacheFile.xml
+c:\users\adams\documents\visual studio 2012\Projects\GuiaCopa\GuiaCopa\obj\Debug\EstadioInfo.g.cs

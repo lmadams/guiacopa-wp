@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using GuiaCopa.Resources;
+using GuiaCopa.Dados;
 
 namespace GuiaCopa
 {
@@ -19,6 +20,19 @@ namespace GuiaCopa
             InitializeComponent();
 
             DataContext = App.bancoDeDados;
+        }
+
+        private void EstadoSelecionado(object sender, SelectionChangedEventArgs e)
+        {
+            if (MainLongListSelector.SelectedItem == null)
+            {
+                return; 
+            }
+
+            NavigationService.Navigate(new Uri("/EstadioInfo.xaml?estadioSelecionado=" + (MainLongListSelector.SelectedItem as Estadio).ID,
+                UriKind.Relative));
+
+            MainLongListSelector.SelectedItem = null;
         }
     }
 }

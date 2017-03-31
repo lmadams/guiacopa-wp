@@ -17,10 +17,11 @@
         <phone:Pivot Title="GUIA DA COPA">
             <phone:PivotItem Header="estádios">
                 <phone:LongListSelector x:Name="MainLongListSelector" Margin="0,0,-12,0"
-                                        ItemsSource="{Binding listaEstadios}">
+                                        ItemsSource="{Binding listaEstadios}" 
+                                        SelectionChanged="EstadoSelecionado">
                     <phone:LongListSelector.ItemTemplate>
                         <DataTemplate>
-                            <Grid Height="110" Background="#FFB93030">
+                            <Grid Height="110">
                                 <Image Source="{Binding Imagem}" Height="80" Margin="0,15,372,15" Width="80"/>
                                 <TextBlock x:Name="estadio" HorizontalAlignment="Left" 
                                            Margin="106,14,0,0" TextWrapping="Wrap" Text="{Binding Nome}" 
