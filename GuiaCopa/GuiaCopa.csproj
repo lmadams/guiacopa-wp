@@ -93,6 +93,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dados\Estadio.cs" />
+    <Compile Include="Dados\MainDados.cs" />
     <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -125,6 +127,12 @@
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Imagens\albertao.jpg" />
+    <Content Include="Imagens\arruda.jpg" />
+    <Content Include="Imagens\castelao.jpg" />
+    <Content Include="Imagens\gremio.jpg" />
+    <Content Include="Imagens\maneGarrincha.jpg" />
+    <Content Include="Imagens\maracana.jpg" />
     <Content Include="Assets\Tiles\FlipCycleTileLarge.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -140,6 +148,9 @@
     <Content Include="Assets\Tiles\IconicTileSmall.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Imagens\mineirao.jpg" />
+    <Content Include="Imagens\morumbi.jpg" />
+    <Content Include="Imagens\sabia.jpg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\AppResources.resx">
