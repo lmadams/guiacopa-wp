@@ -16,7 +16,16 @@
     <Grid x:Name="LayoutRoot" Background="#FF41B217">
         <phone:Pivot Title="GUIA DA COPA">
             <phone:PivotItem Header="estádios">
-                
+                <Grid Height="110" Background="#FFB93030">
+                    <Image Source="/Assets/ApplicationIcon.png" Height="80" Margin="4,15,372,15" Width="80"/>
+                    <TextBlock x:Name="estadio" HorizontalAlignment="Left" 
+                               Margin="106,14,0,0" TextWrapping="Wrap" Text="Nome" 
+                               VerticalAlignment="Top" Width="346" FontSize="28"/>
+                    <TextBlock x:Name="cidade" HorizontalAlignment="Left" 
+                               Margin="106,56,0,0" TextWrapping="Wrap" Text="Cidade" 
+                               VerticalAlignment="Top" Width="346" FontSize="21"
+                               Opacity="0.8"/>
+                </Grid>
             </phone:PivotItem>
         </phone:Pivot>
     </Grid>

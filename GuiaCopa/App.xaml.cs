@@ -7,11 +7,15 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using GuiaCopa.Resources;
+using GuiaCopa.Dados;
 
 namespace GuiaCopa
 {
     public partial class App : Application
     {
+        // Lista de estadios
+        public static MainData bancoDeDados = new MainData();
+
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
