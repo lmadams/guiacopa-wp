@@ -14,7 +14,7 @@ namespace GuiaCopa
     public partial class App : Application
     {
         // Lista de estadios
-        public static MainData bancoDeDados = new MainData();
+        public static MainData bancoDeDados;
 
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
@@ -59,6 +59,7 @@ namespace GuiaCopa
                 PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
             }
 
+            bancoDeDados = new MainData();
         }
 
         // Code to execute when the application is launching (eg, from Start)

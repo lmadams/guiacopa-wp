@@ -4,17 +4,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Linq;
+using System.Data.Linq.Mapping;
 
 namespace GuiaCopa.Dados
 {
+    [Table]
     public class Estadio : INotifyPropertyChanged
     {
+        #region id
         private int id;
-        private string nome;
-        private string cidade;
-        private Uri caminhoImagem;
-        private string descricao;
 
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int ID
         {
             get
@@ -30,7 +31,12 @@ namespace GuiaCopa.Dados
                 }
             }
         }
+        #endregion
 
+        #region cidade
+        private string cidade;
+
+        [Column]
         public string Cidade
         {
             get
@@ -46,7 +52,12 @@ namespace GuiaCopa.Dados
                 }
             }
         }
+        #endregion
 
+        #region nome
+        private string nome;
+
+        [Column]
         public string Nome
         {
             get
@@ -62,8 +73,13 @@ namespace GuiaCopa.Dados
                 }
             }
         }
+        #endregion
 
-        public Uri Imagem
+        #region imagem
+        private string caminhoImagem;
+        
+        [Column]
+        public string CaminhoImagem
         {
             get
             {
@@ -74,11 +90,34 @@ namespace GuiaCopa.Dados
                 if (value != caminhoImagem)
                 {
                     caminhoImagem = value;
+                    NotifyPropertyChanged("CaminhoImagem");
+                }
+            }
+        }
+        #endregion
+
+        private Uri imagem;
+
+        public Uri Imagem
+        {
+            get
+            {
+                return imagem;
+            }
+            set
+            {
+                if (value != imagem)
+                {
+                    imagem = value;
                     NotifyPropertyChanged("Imagem");
                 }
             }
         }
 
+        #region descricao
+        private string descricao;
+
+        [Column]
         public string Descricao
         {
             get
@@ -94,7 +133,9 @@ namespace GuiaCopa.Dados
                 }
             }
         }
+        #endregion
 
+        #region NotifyProperty
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void NotifyPropertyChanged(String propertyName)
@@ -105,5 +146,6 @@ namespace GuiaCopa.Dados
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+        #endregion
     }
 }
