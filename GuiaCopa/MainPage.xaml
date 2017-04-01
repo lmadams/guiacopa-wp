@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
     
     <Grid x:Name="LayoutRoot" Background="#FF41B217">
-        <phone:Pivot Title="GUIA DA COPA">
+        <phone:Pivot Title="GUIA DA COPA" x:Name="Pivot">
             <phone:PivotItem Header="estádios" TabIndex="0">
                 <phone:LongListSelector x:Name="MainLongListSelector" Margin="0,0,-12,0"
                                         ItemsSource="{Binding listaEstadios}" 
@@ -51,13 +51,13 @@
                         <StackPanel Orientation="Horizontal" Height="100" Margin="12,0,0,0">
                             <Image Margin="0,0,10,0" Source="/Imagens/gremio.jpg" Width="80" Height="80" 
                                    Stretch="UniformToFill" RenderTransformOrigin="0.094,0.519" 
-                                   MouseLeftButtonDown="Icone1Seleted" />
+                                   MouseLeftButtonDown="IconeSeleted" />
                             <Image Margin="0,0,10,0" Source="/Imagens/maracana.jpg" Width="80" Height="80" 
                                    Stretch="UniformToFill" RenderTransformOrigin="0.094,0.519" 
-                                   MouseLeftButtonDown="Icone2Seleted" />
+                                   MouseLeftButtonDown="IconeSeleted" />
                             <Image Margin="0,0,10,0" Source="/Imagens/arruda.jpg" Width="80" Height="80" 
                                    Stretch="UniformToFill" RenderTransformOrigin="0.094,0.519" 
-                                   MouseLeftButtonDown="Icone3Seleted" />
+                                   MouseLeftButtonDown="IconeSeleted" />
                         </StackPanel>
                         <Button VerticalAlignment="Bottom" Content="adicionar" Click="adicionarEstadio" />
                     </StackPanel>

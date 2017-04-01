@@ -39,6 +39,28 @@ namespace GuiaCopa
 
         private void adicionarEstadio(object sender, RoutedEventArgs e)
         {
+            // Desafio 2
+            if (string.IsNullOrEmpty(nomeTextBox.Text))
+            {
+                MessageBox.Show("Informe o nome?", "Erro", MessageBoxButton.OK);
+                return;
+            }
+            if (string.IsNullOrEmpty(cidadeTextBox.Text))
+            {
+                MessageBox.Show("Informe a cidade?", "Erro", MessageBoxButton.OK);
+                return;
+            }
+            if (string.IsNullOrEmpty(descricaoTextBox.Text))
+            {
+                MessageBox.Show("Informe a descrição?", "Erro", MessageBoxButton.OK);
+                return;
+            }
+            if (string.IsNullOrEmpty(caminhoIconeSelecionado))
+            {
+                MessageBox.Show("Informe a imagem?", "Erro", MessageBoxButton.OK);
+                return;
+            }
+
             Estadio novoEstadio = new Estadio()
             {
                 Nome = nomeTextBox.Text,
@@ -48,21 +70,13 @@ namespace GuiaCopa
             };
 
             App.bancoDeDados.AdicionarEstadio(novoEstadio);
+            Pivot.SelectedIndex = 0;
         }
 
-        private void Icone1Seleted(object sender, System.Windows.Input.MouseButtonEventArgs e) 
+        private void IconeSeleted(object sender, System.Windows.Input.MouseButtonEventArgs e) 
         {
-            caminhoIconeSelecionado = "/Imagens/gremio.jpg";
-        }
-
-        private void Icone2Seleted(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            caminhoIconeSelecionado = "/Imagens/maracana.jpg";
-        }
-
-        private void Icone3Seleted(object sender, System.Windows.Input.MouseButtonEventArgs e)
-        {
-            caminhoIconeSelecionado = "/Imagens/arruda.jpg";
+            Image img = (Image)sender;
+            caminhoIconeSelecionado = ((System.Windows.Media.Imaging.BitmapImage)img.Source).UriSource.ToString();
         }
     }
 }
